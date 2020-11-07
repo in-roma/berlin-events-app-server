@@ -1,15 +1,14 @@
 // Packages
 const morgan = require('morgan');
 const express = require('express');
-const config = require('config');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 
 // Environment variables
-
-const dotenv = require('dotenv');
-dotenv.config();
+// const config = require('config');
+// const dotenv = require('dotenv');
+// dotenv.config();
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Modules
@@ -29,7 +28,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use('/', home);
 app.use('/api/events', events);
-// app.use('/api/eventtypes', eventTypes);
+app.use('/api/eventtypes', eventTypes);
 app.use('/api/venues', venues);
 app.use('/api/artists', artists);
 app.use('/api/users', users);
@@ -41,14 +40,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw());
 
 // MongoDB
-const db = config.get('db');
+
 mongoose
-	.connect(process.env.MONGODB_URI {
+	.connect(process.env.MONGODB_URI, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useCreateIndex: true,
 	})
-	.then(() => console.log(`Connected to ${db}...`))
+	.then(() => console.log(`Connection to MongoDB`))
 	.catch((error) => {
 		console.log(`There was a problem with mongodb:${error.message}`);
 	});
