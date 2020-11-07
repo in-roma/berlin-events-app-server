@@ -14,7 +14,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // Modules
 const home = require('./routes/home');
 const events = require('./routes/events');
-// const eventTypes = require('./routes/eventtypes');
+const eventtypes = require('./routes/eventtypes');
 const venues = require('./routes/venues');
 const artists = require('./routes/artists');
 const users = require('./routes/users');
@@ -28,7 +28,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use('/', home);
 app.use('/api/events', events);
-// app.use('/api/eventtypes', eventTypes);
+app.use('/api/eventtypes', eventtypes);
 app.use('/api/venues', venues);
 app.use('/api/artists', artists);
 app.use('/api/users', users);
