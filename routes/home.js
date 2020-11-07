@@ -1,9 +1,8 @@
-const { Artist } = require('../models/artist');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-// Get all artists
+// Home
 router.get('/', async (req, res) => {
 	res.send('server running');
 });
