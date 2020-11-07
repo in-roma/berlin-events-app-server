@@ -1,0 +1,4 @@
+{
+    "db": "mongodb+srv://tsh88635dI2jlwnqvJWJHQbm6F873bpHx1Fo46zvy0VIZqyxjN:cxfneCqJs3ZqBoro@cluster0.yr48o.mongodb.net/eventsApp?retryWrites=true&w=majority",
+    "port": "4800"
+}
