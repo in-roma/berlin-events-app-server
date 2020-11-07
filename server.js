@@ -43,7 +43,7 @@ app.use(bodyParser.raw());
 // MongoDB
 const db = config.get('db');
 mongoose
-	.connect(process.env.MONGODB_URI || db, {
+	.connect(process.env.MONGODB_URI {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useCreateIndex: true,
@@ -55,7 +55,7 @@ mongoose
 mongoose.set('useFindAndModify', false);
 
 // Server
-const port = process.env.PORT || config.get('port');
+const port = process.env.PORT;
 const server = app.listen(port, () =>
 	console.log(`Server listening on port ${port}...`)
 );
