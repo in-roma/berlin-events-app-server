@@ -1,4 +1,4 @@
-const { EventType } = require('../models/EventType');
+const { EventType } = require('../models/eventtype');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
@@ -27,4 +27,5 @@ router.post('/', async (req, res) => {
 		res.send(error);
 	}
 });
+
 module.exports = router;
