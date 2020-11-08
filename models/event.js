@@ -71,6 +71,9 @@ const eventSchema = new mongoose.Schema({
 		minlength: 1,
 		maxlength: 2000,
 	},
+	location: {
+		type: Array,
+	},
 });
 
 const Event = mongoose.model('events', eventSchema);

@@ -33,6 +33,7 @@ router.post('/', async (req, res) => {
 			rate: req.body.rate,
 			tag: req.body.tag,
 			imageUrl: req.body.imageUrl,
+			location: req.body.location,
 		});
 		await event.save();
 		res.send(event);
@@ -62,6 +63,7 @@ router.put('/:id', async (req, res) => {
 				rate: req.body.rate,
 				tag: req.body.tag,
 				imageUrl: req.body.imageUrl,
+				location: req.body.location,
 			},
 			{ new: true }
 		);
