@@ -12,6 +12,9 @@ const eventDateSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: 'events',
 	},
+	location: {
+		type: Array,
+	},
 	createdAt: {
 		type: Date,
 		default: Date.now,

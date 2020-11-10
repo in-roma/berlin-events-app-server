@@ -22,6 +22,7 @@ router.post('/', async (req, res) => {
 			utc: req.body.utc,
 			type: req.body.type,
 			event: req.body.event,
+			location: req.body.location,
 		});
 		await eventDate.save();
 		res.send(eventDate);
@@ -39,6 +40,7 @@ router.put('/:id', async (req, res) => {
 				utc: req.body.utc,
 				type: req.body.type,
 				event: req.body.event,
+				location: req.body.location,
 			},
 			{ new: true }
 		);
