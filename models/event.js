@@ -74,6 +74,9 @@ const eventSchema = new mongoose.Schema({
 	location: {
 		type: Array,
 	},
+	utc: {
+		type: String,
+	},
 });
 
 const Event = mongoose.model('events', eventSchema);
