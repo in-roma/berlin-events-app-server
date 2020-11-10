@@ -14,6 +14,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // Modules
 const home = require('./routes/home');
 const events = require('./routes/events');
+const eventdates = require('./routes/eventdates');
 const eventtypes = require('./routes/eventtypes');
 const venues = require('./routes/venues');
 const artists = require('./routes/artists');
@@ -28,6 +29,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use('/', home);
 app.use('/api/events', events);
+app.use('/api/eventdates', eventdates);
 app.use('/api/eventtypes', eventtypes);
 app.use('/api/venues', venues);
 app.use('/api/artists', artists);
