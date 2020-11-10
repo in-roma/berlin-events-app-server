@@ -14,7 +14,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // Modules
 const home = require('./routes/home');
 const events = require('./routes/events');
-const eventdates = require('./routes/eventdates');
+const eventdates = require('./routes/eventsdatetime');
 const eventtypes = require('./routes/eventtypes');
 const venues = require('./routes/venues');
 const artists = require('./routes/artists');
