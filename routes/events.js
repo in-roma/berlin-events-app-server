@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
 			imageUrl: req.body.imageUrl,
 			location: req.body.location,
 			utc: req.body.utc,
+			eventdate: req.body.eventdate,
 		});
 		await event.save();
 		res.send(event);
@@ -66,6 +67,7 @@ router.put('/:id', async (req, res) => {
 				imageUrl: req.body.imageUrl,
 				location: req.body.location,
 				utc: req.body.utc,
+				eventdate: req.body.eventdate,
 			},
 			{ new: true }
 		);

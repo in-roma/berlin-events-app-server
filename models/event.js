@@ -12,9 +12,8 @@ const eventSchema = new mongoose.Schema({
 		maxlength: 255,
 	},
 	venue: {
-		type: String,
-		minlength: 1,
-		maxlength: 255,
+		type: mongoose.Schema.ObjectId,
+		ref: 'venues',
 	},
 	date: {
 		type: String,
@@ -76,6 +75,10 @@ const eventSchema = new mongoose.Schema({
 	},
 	utc: {
 		type: String,
+	},
+	eventdates: {
+		type: mongoose.Schema.ObjectId,
+		ref: 'eventdates',
 	},
 });
 

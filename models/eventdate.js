@@ -6,11 +6,11 @@ const eventDateSchema = new mongoose.Schema({
 	},
 	type: {
 		type: mongoose.Schema.ObjectId,
-		ref: 'EventType',
+		ref: 'eventtypes',
 	},
 	event: {
 		type: mongoose.Schema.ObjectId,
-		ref: 'Event',
+		ref: 'events',
 	},
 	createdAt: {
 		type: Date,
