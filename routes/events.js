@@ -20,22 +20,14 @@ router.post('/', async (req, res) => {
 	try {
 		const event = new Event({
 			event: req.body.event,
+			type: req.body.type,
 			artist: req.body.artist,
 			venue: req.body.venue,
-			date: req.body.date,
-			time: req.body.time,
-			address: req.body.address,
-			city: req.body.city,
-			postalcode: req.body.postalcode,
-			price: req.body.price,
 			description: req.body.description,
-			type: req.body.type,
+			price: req.body.price,
 			rate: req.body.rate,
 			tag: req.body.tag,
 			imageUrl: req.body.imageUrl,
-			location: req.body.location,
-			utc: req.body.utc,
-			eventdate: req.body.eventdate,
 		});
 		await event.save();
 		res.send(event);
@@ -52,22 +44,14 @@ router.put('/:id', async (req, res) => {
 			req.params.id,
 			{
 				event: req.body.event,
+				type: req.body.type,
 				artist: req.body.artist,
 				venue: req.body.venue,
-				date: req.body.date,
-				time: req.body.time,
-				address: req.body.address,
-				city: req.body.city,
-				postalcode: req.body.postalcode,
-				price: req.body.price,
 				description: req.body.description,
-				type: req.body.type,
+				price: req.body.price,
 				rate: req.body.rate,
 				tag: req.body.tag,
 				imageUrl: req.body.imageUrl,
-				location: req.body.location,
-				utc: req.body.utc,
-				eventdate: req.body.eventdate,
 			},
 			{ new: true }
 		);
