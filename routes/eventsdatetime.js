@@ -20,9 +20,7 @@ router.post('/', async (req, res) => {
 	try {
 		const eventDate = new EventDate({
 			utc: req.body.utc,
-			type: req.body.type,
 			event: req.body.event,
-			location: req.body.location,
 		});
 		await eventDate.save();
 		res.send(eventDate);
@@ -38,9 +36,7 @@ router.put('/:id', async (req, res) => {
 			req.params.id,
 			{
 				utc: req.body.utc,
-				type: req.body.type,
 				event: req.body.event,
-				location: req.body.location,
 			},
 			{ new: true }
 		);
