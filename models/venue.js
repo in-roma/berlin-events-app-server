@@ -24,9 +24,6 @@ const venueSchema = new mongoose.Schema({
 		minlength: 1,
 		maxlength: 250,
 	},
-	events: {
-		type: Array,
-	},
 	imagesUrl: {
 		type: Array,
 	},
