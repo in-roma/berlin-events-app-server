@@ -25,6 +25,7 @@ router.post('/', async (req, res) => {
 			imagesUrl: req.body.imagesUrl,
 			links: req.body.links,
 			events: req.body.events,
+			picture: req.body.picture,
 		});
 		await artist.save();
 		res.send(artist);
@@ -45,6 +46,7 @@ router.put('/:id', async (req, res) => {
 				imagesUrl: req.body.imagesUrl,
 				links: req.body.links,
 				events: req.body.events,
+				picture: req.body.picture,
 			},
 			{ new: true }
 		);

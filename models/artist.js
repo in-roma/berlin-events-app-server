@@ -25,6 +25,9 @@ const artistSchema = new mongoose.Schema({
 	events: {
 		type: Array,
 	},
+	picture: {
+		type: String,
+	},
 });
 
 const Artist = mongoose.model('artists', artistSchema);
