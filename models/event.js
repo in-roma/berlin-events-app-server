@@ -46,6 +46,9 @@ const eventSchema = new mongoose.Schema(
 			minlength: 1,
 			maxlength: 2000,
 		},
+		reviews: {
+			type: Array,
+		},
 	},
 	{
 		toJSON: { virtuals: true },

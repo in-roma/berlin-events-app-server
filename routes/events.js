@@ -28,6 +28,7 @@ router.post('/', async (req, res) => {
 			rate: req.body.rate,
 			tag: req.body.tag,
 			imageUrl: req.body.imageUrl,
+			reviews: req.body.reviews,
 		});
 		await event.save();
 		res.send(event);
@@ -52,6 +53,7 @@ router.put('/:id', async (req, res) => {
 				rate: req.body.rate,
 				tag: req.body.tag,
 				imageUrl: req.body.imageUrl,
+				reviews: req.body.reviews,
 			},
 			{ new: true }
 		);
