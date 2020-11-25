@@ -4,12 +4,10 @@ const eventSchema = new mongoose.Schema(
 	{
 		event: {
 			type: String,
-			minlength: 1,
 			maxlength: 255,
 		},
 		type: {
 			type: String,
-			minlength: 1,
 			maxlength: 255,
 		},
 		artist: {
@@ -22,27 +20,22 @@ const eventSchema = new mongoose.Schema(
 		},
 		description: {
 			type: String,
-			minlength: 1,
 			maxlength: 5000,
 		},
 		price: {
 			type: String,
-			minlength: 1,
 			maxlength: 255,
 		},
 		rate: {
 			type: Number,
-			minlength: 1,
 			maxlength: 255,
 		},
 		tag: {
 			type: String,
-			minlength: 1,
 			maxlength: 255,
 		},
 		imageUrl: {
 			type: String,
-			minlength: 1,
 			maxlength: 2000,
 		},
 		reviews: {
@@ -62,7 +55,7 @@ eventSchema.pre(/^find/, function (next) {
 	});
 	this.populate({
 		path: 'artist',
-		select: 'name description website imagesUrl links picture',
+		select: 'name type description website imagesUrl links picture',
 	});
 	next();
 });

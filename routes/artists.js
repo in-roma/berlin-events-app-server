@@ -20,6 +20,7 @@ router.post('/', async (req, res) => {
 	try {
 		const artist = new Artist({
 			name: req.body.name,
+			type: req.body.type,
 			description: req.body.description,
 			website: req.body.website,
 			imagesUrl: req.body.imagesUrl,
@@ -41,6 +42,7 @@ router.put('/:id', async (req, res) => {
 			req.params.id,
 			{
 				name: req.body.name,
+				type: req.body.type,
 				description: req.body.description,
 				website: req.body.website,
 				imagesUrl: req.body.imagesUrl,
