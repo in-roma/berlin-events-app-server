@@ -13,9 +13,8 @@ const eventSchema = new mongoose.Schema(
 			maxlength: 255,
 		},
 		artist: {
-			type: String,
-			minlength: 1,
-			maxlength: 255,
+			type: mongoose.Schema.ObjectId,
+			ref: 'artists',
 		},
 		venue: {
 			type: mongoose.Schema.ObjectId,
@@ -60,6 +59,10 @@ eventSchema.pre(/^find/, function (next) {
 	this.populate({
 		path: 'venue',
 		select: 'name address description location website imagesUrl',
+	});
+	this.populate({
+		path: 'artist',
+		select: 'name description website imagesUrl links picture',
 	});
 	next();
 });
