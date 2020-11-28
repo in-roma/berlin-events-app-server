@@ -30,6 +30,8 @@ router.post('/', async (req, res) => {
 			imageUrl: req.body.imageUrl,
 			reviews: req.body.reviews,
 			extraData: req.body.extraData,
+			youtubeLink: req.body.youtubeLink,
+			soundCloudLink: req.body.soundCloudLink,
 		});
 		await event.save();
 		res.send(event);
@@ -56,6 +58,8 @@ router.put('/:id', async (req, res) => {
 				imageUrl: req.body.imageUrl,
 				reviews: req.body.reviews,
 				extraData: req.body.extraData,
+				youtubeLink: req.body.youtubeLink,
+				soundCloudLink: req.body.soundCloudLink,
 			},
 			{ new: true }
 		);

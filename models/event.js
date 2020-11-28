@@ -44,6 +44,12 @@ const eventSchema = new mongoose.Schema(
 		extraData: {
 			type: Array,
 		},
+		youtubeLink: {
+			type: String,
+		},
+		soundCloudLink: {
+			type: String,
+		},
 	},
 	{
 		toJSON: { virtuals: true },

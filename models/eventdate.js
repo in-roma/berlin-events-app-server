@@ -24,7 +24,7 @@ eventDateSchema.pre(/^find/, function (next) {
 	this.populate({
 		path: 'event',
 		select:
-			'location event artist date price description type imageUrl address tag reviews extraData',
+			'location event artist date price description type imageUrl address tag reviews extraData youtubeLink soundCloudLink',
 	});
 	next();
 });
